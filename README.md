@@ -4,25 +4,25 @@ Vending Machine Kata implemented as an [Obsidian.md](https://obsidian.md/) plugi
 
 The Vending Machine Kata is described here:
 
-- [Guy Royse: Vending Machine Kata](https://github.com/guyroyse/vending-machine-kata)
-- [Samman Coaching: Vending Machine Kata](https://sammancoaching.org/kata_descriptions/vending_machine.html)
-- [Codewars: Vending Machine](https://www.codewars.com/kata/586e6d4cb98de09e3800014f/train/javascript)
+-   [Guy Royse: Vending Machine Kata](https://github.com/guyroyse/vending-machine-kata)
+-   [Samman Coaching: Vending Machine Kata](https://sammancoaching.org/kata_descriptions/vending_machine.html)
+-   [Codewars: Vending Machine](https://www.codewars.com/kata/586e6d4cb98de09e3800014f/train/javascript)
 
 ## How to use
 
-- Clone this repo to a local development folder. For convenience, you can place or symlink this folder in `VaultFolder/.obsidian/plugins/obsidian-vending-machine`.
-- Install [NodeJS](https://nodejs.org/), then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
+-   Clone this repo to a local development folder. For convenience, you can place or symlink this folder in `VaultFolder/.obsidian/plugins/obsidian-vending-machine`.
+-   Install [NodeJS](https://nodejs.org/), then run `npm i` in the command line under your repo folder.
+-   Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
+-   Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
+-   Reload Obsidian to load the new version of your plugin.
+-   Enable plugin in settings window.
 
 ## Developing
 
-- Clone this repo.
-- Make sure your [NodeJS](https://nodejs.org/) is at least v16 (`node --version`).
-- `npm i` or `yarn` to install dependencies.
-- `npm run dev` to start compilation in watch mode.
+-   Clone this repo.
+-   Make sure your [NodeJS](https://nodejs.org/) is at least v16 (`node --version`).
+-   `npm i` or `yarn` to install dependencies.
+-   `npm run dev` to start compilation in watch mode.
 
 ## Testing
 
@@ -42,15 +42,15 @@ Due to the Obsidian source code not being open-source Jest's more common mocking
 
 ## Manually installing the plugin
 
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/obsidian-vending-machine`.
+-   Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/obsidian-vending-machine`.
 
 ## Improve code quality with eslint
 
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code.
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint .\src\`
+-   [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code.
+-   To use eslint with this project, make sure to install eslint from terminal:
+    -   `npm install -g eslint`
+-   To use eslint to analyze this project use this command:
+    -   `eslint main.ts`
+    -   eslint will then create a report with suggestions for code improvement by file and line number.
+-   If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
+    -   `eslint .\src\`

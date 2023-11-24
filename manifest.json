@@ -1,11 +1,11 @@
 {
-  "id": "obsidina-vending-machine",
-  "name": "Vending Machine",
-  "version": "0.0.1",
-  "minAppVersion": "1.4.13",
-  "description": "Programming exercise: Vending Machine Kata",
-  "author": "Stefan Boos",
-  "authorUrl": "https://boos.systems",
-  "fundingUrl": "https://www.buymeacoffee.com/wonderbird",
-  "isDesktopOnly": false
+	"id": "obsidina-vending-machine",
+	"name": "Vending Machine",
+	"version": "0.0.1",
+	"minAppVersion": "1.4.13",
+	"description": "Programming exercise: Vending Machine Kata",
+	"author": "Stefan Boos",
+	"authorUrl": "https://boos.systems",
+	"fundingUrl": "https://www.buymeacoffee.com/wonderbird",
+	"isDesktopOnly": false
 }
