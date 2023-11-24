@@ -2,6 +2,15 @@
 	"name": "obsidian-vending-machine",
 	"version": "0.0.1",
 	"description": "Programming exercise: Vending Machine Kata",
+	"homepage": "https://github.com/wonderbirds-katas/obsidian-vending-machine#readme",
+	"bugs": {
+		"url": "https://github.com/wonderbirds-katas/obsidian-vending-machine/issues",
+		"email": "kontakt@boos.systems"
+	},
+	"funding": {
+		"type": "buy me a coffee",
+		"url": "https://www.buymeacoffee.com/wonderbird"
+	},
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
