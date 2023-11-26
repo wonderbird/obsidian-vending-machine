@@ -8,6 +8,8 @@ The Vending Machine Kata is described here:
 -   [Samman Coaching: Vending Machine Kata](https://sammancoaching.org/kata_descriptions/vending_machine.html)
 -   [Codewars: Vending Machine](https://www.codewars.com/kata/586e6d4cb98de09e3800014f/train/javascript)
 
+The instructions used in this implementation are in the file [INSTRUCTIONS.md](./INSTRUCTIONS.md). 
+
 ## How to use
 
 -   Clone this repo to a local development folder. For convenience, you can place or symlink this folder in `VaultFolder/.obsidian/plugins/obsidian-vending-machine`.
