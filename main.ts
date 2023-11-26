@@ -18,8 +18,12 @@ class VendingMachine extends Modal {
 	}
 
 	onOpen() {
-		const { contentEl } = this;
-		contentEl.setText("Vending Machine");
+		const { contentEl, titleEl } = this;
+		titleEl.setText("Vending Machine");
+
+		contentEl.createEl("div", {
+			text: "INSERT COIN",
+		});
 	}
 
 	onClose() {
