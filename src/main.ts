@@ -1,4 +1,6 @@
 import { App, Modal, Plugin } from "obsidian";
+import { Display } from "./display";
+import { VendingMachine } from "./vendingMachine";
 
 export default class VendingMachinePlugin extends Plugin {
 	async onload() {
@@ -6,24 +8,28 @@ export default class VendingMachinePlugin extends Plugin {
 			id: "open-vending-machine",
 			name: "Open Vending Machine",
 			callback: () => {
-				new VendingMachine(this.app).open();
+				new VendingMachineDialog(this.app).open();
 			},
 		});
 	}
 }
 
-class VendingMachine extends Modal {
+export class VendingMachineDialog extends Modal {
+	private _display: Display;
+	private _vendingMachine: VendingMachine = new VendingMachine(new Display());
+
 	constructor(app: App) {
 		super(app);
+
+		this._display = new Display();
+		this._vendingMachine = new VendingMachine(this._display);
 	}
 
 	onOpen() {
 		const { contentEl, titleEl } = this;
 		titleEl.setText("Vending Machine");
 
-		contentEl.createEl("div", {
-			text: "INSERT COIN",
-		});
+		this._display.bindToParent(contentEl);
 	}
 
 	onClose() {
