@@ -1,4 +1,4 @@
-import VendingMachinePlugin from "./main";
+import VendingMachinePlugin from "../src/main";
 import { App, PluginManifest } from "obsidian";
 
 jest.mock("obsidian");
