@@ -32,10 +32,19 @@ export class VendingMachineDialog extends Modal {
 		const display = contentEl.createEl("div", { text: "" });
 		this._display.showIn(display);
 
-		new Setting(contentEl).addButton((button) => {
+		const coinSlot = new Setting(contentEl);
+
+		coinSlot.addButton((button) => {
 			button.setButtonText("Penny");
 			button.onClick(() => {
 				this._vendingMachine.insertCoin("penny");
+			});
+		});
+
+		coinSlot.addButton((button) => {
+			button.setButtonText("Nickel");
+			button.onClick(() => {
+				this._vendingMachine.insertCoin("nickel");
 			});
 		});
 	}

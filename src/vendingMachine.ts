@@ -9,8 +9,14 @@ export class VendingMachine {
 		this._display.value = "INSERT COIN";
 	}
 
-	insertCoin(penny: string) {
-		this._money += 0.01;
+	insertCoin(coinName: string) {
+		let coinValue = 0.01;
+
+		if (coinName === "nickel") {
+			coinValue = 0.05;
+		}
+
+		this._money += coinValue;
 		this._display.value = `${this._money.toFixed(2)}`;
 	}
 }
