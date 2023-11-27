@@ -42,5 +42,22 @@ describe("VendingMachine", () => {
 				expect(display.value).toBe(expectedDisplay);
 			}
 		);
+
+		it.each([
+			["0.10", 1],
+			["0.20", 2],
+			["1.00", 10],
+		])(
+			"%p when %p dimes are inserted",
+			(expectedDisplay: string, numberOfDimes: number) => {
+				const display = new Display();
+				const machine = new VendingMachine(display);
+
+				for (let i = 0; i < numberOfDimes; i++)
+					machine.insertCoin("dime");
+
+				expect(display.value).toBe(expectedDisplay);
+			}
+		);
 	});
 });

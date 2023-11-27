@@ -47,6 +47,13 @@ export class VendingMachineDialog extends Modal {
 				this._vendingMachine.insertCoin("nickel");
 			});
 		});
+
+		coinSlot.addButton((button) => {
+			button.setButtonText("Dime");
+			button.onClick(() => {
+				this._vendingMachine.insertCoin("dime");
+			});
+		});
 	}
 
 	onClose() {
