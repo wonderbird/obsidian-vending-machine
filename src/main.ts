@@ -1,4 +1,4 @@
-import { App, Modal, Plugin } from "obsidian";
+import { App, Modal, Plugin, Setting } from "obsidian";
 import { Display } from "./display";
 import { VendingMachine } from "./vendingMachine";
 
@@ -29,7 +29,15 @@ export class VendingMachineDialog extends Modal {
 		const { contentEl, titleEl } = this;
 		titleEl.setText("Vending Machine");
 
-		this._display.bindToParent(contentEl);
+		const display = contentEl.createEl("div", { text: "" });
+		this._display.showIn(display);
+
+		new Setting(contentEl).addButton((button) => {
+			button.setButtonText("Penny");
+			button.onClick(() => {
+				this._vendingMachine.insertCoin("penny");
+			});
+		});
 	}
 
 	onClose() {

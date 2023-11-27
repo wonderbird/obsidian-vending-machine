@@ -11,9 +11,8 @@ export class Display {
 		this._htmlElement.innerText = value;
 	}
 
-	public bindToParent(parent: HTMLElement) {
-		this._htmlElement = parent.createEl("div", {
-			text: this.value,
-		});
+	public showIn(htmlElement: HTMLElement) {
+		this._htmlElement = htmlElement;
+		this._htmlElement.innerText = this._value;
 	}
 }
