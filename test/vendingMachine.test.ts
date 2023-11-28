@@ -59,5 +59,22 @@ describe("VendingMachine", () => {
 				expect(display.value).toBe(expectedDisplay);
 			}
 		);
+
+		it.each([
+			["0.25", 1],
+			["0.50", 2],
+			["2.50", 10],
+		])(
+			"%p when %p quarters are inserted",
+			(expectedDisplay: string, numberOfQuarters: number) => {
+				const display = new Display();
+				const machine = new VendingMachine(display);
+
+				for (let i = 0; i < numberOfQuarters; i++)
+					machine.insertCoin("quarter");
+
+				expect(display.value).toBe(expectedDisplay);
+			}
+		);
 	});
 });

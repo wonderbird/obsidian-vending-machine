@@ -18,6 +18,9 @@ export class VendingMachine {
 		if (coinName === "dime") {
 			coinValue = 0.1;
 		}
+		if (coinName === "quarter") {
+			coinValue = 0.25;
+		}
 
 		this._money += coinValue;
 		this._display.value = `${this._money.toFixed(2)}`;

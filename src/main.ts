@@ -54,6 +54,13 @@ export class VendingMachineDialog extends Modal {
 				this._vendingMachine.insertCoin("dime");
 			});
 		});
+
+		coinSlot.addButton((button) => {
+			button.setButtonText("Quarter");
+			button.onClick(() => {
+				this._vendingMachine.insertCoin("quarter");
+			});
+		});
 	}
 
 	onClose() {
