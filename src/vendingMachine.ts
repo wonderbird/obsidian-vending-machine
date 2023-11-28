@@ -1,4 +1,5 @@
 import { Display } from "./display";
+import { CoinId, coinValues } from "./coins";
 
 export class VendingMachine {
 	private _display: Display;
@@ -9,20 +10,8 @@ export class VendingMachine {
 		this._display.value = "INSERT COIN";
 	}
 
-	insertCoin(coinName: string) {
-		let coinValue = 0.01;
-
-		if (coinName === "nickel") {
-			coinValue = 0.05;
-		}
-		if (coinName === "dime") {
-			coinValue = 0.1;
-		}
-		if (coinName === "quarter") {
-			coinValue = 0.25;
-		}
-
-		this._money += coinValue;
+	insertCoin(coinId: CoinId) {
+		this._money += coinValues[coinId];
 		this._display.value = `${this._money.toFixed(2)}`;
 	}
 }

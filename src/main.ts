@@ -1,6 +1,7 @@
 import { App, Modal, Plugin, Setting } from "obsidian";
 import { Display } from "./display";
 import { VendingMachine } from "./vendingMachine";
+import { coinIds, coinLabels } from "./coins";
 
 export default class VendingMachinePlugin extends Plugin {
 	async onload() {
@@ -34,33 +35,14 @@ export class VendingMachineDialog extends Modal {
 
 		const coinSlot = new Setting(contentEl);
 
-		coinSlot.addButton((button) => {
-			button.setButtonText("Penny");
-			button.onClick(() => {
-				this._vendingMachine.insertCoin("penny");
+		for (const coinId of coinIds) {
+			coinSlot.addButton((button) => {
+				button.setButtonText(coinLabels[coinId]);
+				button.onClick(() => {
+					this._vendingMachine.insertCoin(coinId);
+				});
 			});
-		});
-
-		coinSlot.addButton((button) => {
-			button.setButtonText("Nickel");
-			button.onClick(() => {
-				this._vendingMachine.insertCoin("nickel");
-			});
-		});
-
-		coinSlot.addButton((button) => {
-			button.setButtonText("Dime");
-			button.onClick(() => {
-				this._vendingMachine.insertCoin("dime");
-			});
-		});
-
-		coinSlot.addButton((button) => {
-			button.setButtonText("Quarter");
-			button.onClick(() => {
-				this._vendingMachine.insertCoin("quarter");
-			});
-		});
+		}
 	}
 
 	onClose() {
