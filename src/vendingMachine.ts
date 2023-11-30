@@ -1,5 +1,5 @@
 import { Display } from "./display";
-import { CoinId, coinValues } from "./coins";
+import { Coin, CoinId, coinValues } from "./coins";
 
 export class VendingMachine {
 	private _display: Display;
@@ -10,7 +10,7 @@ export class VendingMachine {
 		this._display.value = "INSERT COIN";
 	}
 
-	insertCoin(coinId: CoinId) {
+	insertCoin(coinId: Coin) {
 		this._money += coinValues[coinId];
 		this._display.value = `${this._money.toFixed(2)}`;
 	}

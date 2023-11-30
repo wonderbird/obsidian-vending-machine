@@ -1,3 +1,14 @@
+export enum Coin {
+	Penny = "penny",
+	Nickel = "nickel",
+	Dime = "dime",
+	Quarter = "quarter",
+}
+
+export const CoinValues: string[] = Object.keys(Coin)
+	.filter((k) => Number.isNaN(k))
+	.map((k) => k.toLowerCase());
+
 export const coinIds = ["penny", "nickel", "dime", "quarter"];
 
 export type CoinId = (typeof coinIds)[number];

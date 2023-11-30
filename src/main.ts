@@ -1,7 +1,7 @@
 import { App, Modal, Plugin, Setting } from "obsidian";
 import { Display } from "./display";
 import { VendingMachine } from "./vendingMachine";
-import { coinIds, coinLabels } from "./coins";
+import { Coin, coinLabels } from "./coins";
 
 export default class VendingMachinePlugin extends Plugin {
 	async onload() {
